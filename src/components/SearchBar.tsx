@@ -9,7 +9,7 @@ const SearchBar = ({ query, setQuery, onSearch }) => {
         placeholder="Search repositories..."
         value={query}
         onChangeText={setQuery}
-        onSubmitEditing={onSearch} // Triggers search when pressing "Enter"
+        onSubmitEditing={onSearch} 
       />
       <TouchableOpacity style={styles.button} onPress={onSearch}>
         <Text style={styles.buttonText}>Search</Text>

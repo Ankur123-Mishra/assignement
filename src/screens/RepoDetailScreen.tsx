@@ -6,13 +6,12 @@ const RepoDetail = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Repository Owner Info */}
       <View style={styles.ownerSection}>
         <Image source={{ uri: repo.owner.avatar_url }} style={styles.avatar} />
         <Text style={styles.ownerName}>{repo.owner.login}</Text>
       </View>
 
-      {/* Repository Details */}
+    
       <Text style={styles.repoName}>{repo.name}</Text>
       {repo.description && <Text style={styles.description}>{repo.description}</Text>}
 
@@ -22,7 +21,7 @@ const RepoDetail = ({ route }) => {
         <Text style={styles.stat}>💻 Language: {repo.language || 'Unknown'}</Text>
       </View>
 
-      {/* Repository Link */}
+     
       <Text style={styles.link} onPress={() => Linking.openURL(repo.html_url)}>
         🔗 Open in GitHub
       </Text>
